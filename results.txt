@@ -1,0 +1,20 @@
+The most popular articles in order
+1: Article: Candidate is jerk, alleges rival, Total Views: 342102
+2: Article: Bears love berries, alleges bear, Total Views: 256365
+3: Article: Bad things gone, say good people, Total Views: 171762
+4: Article: Goats eat Google's lawn, Total Views: 85775
+5: Article: Trouble for troubled troublemakers, Total Views: 85679
+6: Article: There are a lot of bears, Total Views: 85392
+7: Article: Balloon goons doomed, Total Views: 85387
+8: Article: Media obsessed with bears, Total Views: 85273
+
+
+The most popular authors in order
+1: Author: Ursula La Multa, Total Views: 512805
+2: Author: Rudolf von Treppenwitz, Total Views: 427781
+3: Author: Anonymous Contributor, Total Views: 171762
+4: Author: Markoff Chaney, Total Views: 85387
+
+
+Days with log errors greater than 1 percent
+1: date: 2016-07-17, Percent of log errors: 2
