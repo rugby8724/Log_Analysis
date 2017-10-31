@@ -17,8 +17,9 @@ the site's readers like
 ## Running the Log Analysis reporting tool
 # In the terminal:
   * first confirm the reporting tool is in the vagrant folder
+  * add the database to the log_analysis folder [news database](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip)
   * cd to log_analysis folder
-  * afterwards us $ vagrant up
+  * afterwards  $ vagrant up
   * followed by $ vagrant ssh
   * run the tool $ python3 newsdata.py
   * The queries will now be displayed in the terminal
