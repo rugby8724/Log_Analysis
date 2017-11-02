@@ -16,7 +16,6 @@ def news_query(query):
     return(results)
 
 
-
 def popular_articles():
     """popular_articles will search newsdata.sql and return a list of articles
         in descending order from highest to lowest views."""
