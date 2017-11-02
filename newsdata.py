@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 import psycopg2
 from datetime import datetime
@@ -15,12 +16,14 @@ def news_query(query):
     return(results)
 
 
+
 def popular_articles():
     """popular_articles will search newsdata.sql and return a list of articles
         in descending order from highest to lowest views."""
     title = 'The most popular articles in order'
     query1 = (" select articles.title, count(*) as num from articles, log "
-              "where log.path like concat('%', articles.slug, '%') "
+              "where log.path like concat('%',articles.slug,'%') "
+              "and log.status = '200 OK' "
               "group by articles.title "
               "order by num desc")
     run_query = news_query(query1)
@@ -38,6 +41,7 @@ def popular_authors():
               "from authors, articles, "
               "(select articles.title, count(*) as num from articles, "
               "log where log.path like concat('%', articles.slug, '%') "
+              "and log.status = '200 OK' "
               "group by articles.title order by num desc) as top_articles "
               "where top_articles.title = articles.title and articles.author "
               "= authors.id "
@@ -70,12 +74,9 @@ def log_errors():
               .format(i+1, run_query[i][0], run_query[i][3]))
 
 
-def run_querys():
+if __name__ == "__main__":
     popular_articles()
     print('\n')
     popular_authors()
     print('\n')
     log_errors()
-
-
-run_querys()
